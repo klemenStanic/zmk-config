@@ -35,8 +35,8 @@
 
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T           &kp Y                   &kp U     &kp I      &kp O    &kp P     &kp ESC
-&kp LCTRL  &kp A  &tp S SI_SCAR &kp D     &kp F  &kp G           &kp H                   &kp J     &kp K      &kp L    &tp SEMI SI_CCAR  &tp LA(LS(LEFT_GUI)) SQT
-&kp LSHFT  &tp Z SI_ZCAR  &kp X  &kp C     &kp V  &kp B           &kp N                   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp LCTRL  &kp A  &tp SI_SCAR S &kp D     &kp F  &kp G           &kp H                   &kp J     &kp K      &kp L    &kp SEMI &tp LA(LS(LEFT_GUI)) SQT
+&kp LSHFT  &tp SI_ZCAR Z &kp X  &tp SI_CCAR C     &kp V  &kp B           &kp N                   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                          &kp LGUI  &mo 1  &tp LALT RET    &tp LC(LEFT_ALT) SPACE  &kp BSPC  &mo 2
             >;
         };
@@ -73,4 +73,5 @@
             >;
         };
     };
-};
+}; 
+
