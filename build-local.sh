@@ -17,7 +17,7 @@ docker run --rm \
   -v "$SCRIPT_DIR/config:/zmk-config/config:Z" \
   -v "$SCRIPT_DIR/build:/zmk-config/build:Z" \
   -w /zmk-config \
-  zmkfirmware/zmk-build-arm:stable \
+  zmkfirmware/zmk-build-arm:2.5 \
   /bin/bash -c '\
     west init -l config && \
     west update && \
@@ -30,7 +30,7 @@ docker run --rm \
   -v "$SCRIPT_DIR/config:/zmk-config/config:Z" \
   -v "$SCRIPT_DIR/build:/zmk-config/build:Z" \
   -w /zmk-config \
-  zmkfirmware/zmk-build-arm:stable \
+  zmkfirmware/zmk-build-arm:2.5 \
   /bin/bash -c '\
     west init -l config && \
     west update && \
