@@ -21,8 +21,8 @@ docker run --rm \
   /bin/bash -c '\
     west init -l config && \
     west update && \
-    west build -s zmk/app -b nice_nano -d build/left -- -DZMK_CONFIG="/zmk-config/config" -DSHIELD="corne_left" && \
-    cp build/left/zephyr/zmk.uf2 build/corne_left-nice_nano.uf2'
+    west build -s zmk/app -b nice_nano_v2 -d build/left -- -DZMK_CONFIG="/zmk-config/config" -DSHIELD="corne_left" && \
+    cp build/left/zephyr/zmk.uf2 build/corne_left-nice_nano_v2.uf2'
 
 echo ""
 echo "Building right side with nice_view..."
@@ -34,8 +34,8 @@ docker run --rm \
   /bin/bash -c '\
     west init -l config && \
     west update && \
-    west build -s zmk/app -b nice_nano -d build/right -- -DZMK_CONFIG="/zmk-config/config" -DSHIELD="corne_right nice_view_adapter nice_view" && \
-    cp build/right/zephyr/zmk.uf2 build/corne_right-nice_nano.uf2'
+    west build -s zmk/app -b nice_nano_v2 -d build/right -- -DZMK_CONFIG="/zmk-config/config" -DSHIELD="corne_right nice_view_adapter nice_view" && \
+    cp build/right/zephyr/zmk.uf2 build/corne_right-nice_nano_v2.uf2'
 
 echo ""
 echo "Build complete! Firmware files:"
