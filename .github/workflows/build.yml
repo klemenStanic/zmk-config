@@ -12,8 +12,10 @@ jobs:
         include:
           - board: nice_nano_v2
             shield: corne_left
+            cmake-board: nice_nano/nrf52840
           - board: nice_nano_v2
             shield: corne_right nice_view_adapter nice_view
+            cmake-board: nice_nano/nrf52840
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,7 +64,7 @@ jobs:
       - name: West Build (${{ env.display_name }})
         working-directory: ${{ env.base_dir }}
         run: |
-          west build -s zmk/app -d "${{ env.build_dir }}" -b "${{ matrix.board }}" -- \
+          west build -s zmk/app -d "${{ env.build_dir }}" -b "${{ matrix.cmake-board }}" -- \
             -DZMK_CONFIG="${{ env.base_dir }}/config" ${{ env.extra_cmake_args }}
 
       - name: Rename artifacts
