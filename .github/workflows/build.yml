@@ -23,6 +23,7 @@ jobs:
           echo "build_dir=$(mktemp -d)" >> $GITHUB_ENV
 
       - name: Prepare variables
+        shell: bash
         run: |
           if [ -e zephyr/module.yml ]; then
             export zmk_load_arg=" -DZMK_EXTRA_MODULES='${GITHUB_WORKSPACE}'"
