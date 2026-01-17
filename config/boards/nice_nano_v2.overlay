@@ -1,0 +1,6 @@
+/* Fix for uart0_sleep binding-cells error in Zephyr 3.5.0 with nice_nano_v2 */
+
+&pinctrl {
+    /* Add pinctrl-cells to make uart0_sleep compatible with Zephyr 3.5.0 */
+    #pinctrl-cells = <1>;
+};
